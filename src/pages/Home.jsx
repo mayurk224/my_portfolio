@@ -3,6 +3,11 @@ import Navbar from '../components/Navbar'
 import Hero from '../sections/Hero'
 import About from '../sections/About'
 import Skills from '../sections/Skills'
+import Projects from '../sections/Projects'
+import Testimonial from '../sections/Testimonial'
+import Contact from '../sections/Contact'
+import Footer from '../components/Footer'
+import ScrollToTop from '../components/ScrollToTop'
 
 const Home = () => {
   return (
@@ -10,10 +15,15 @@ const Home = () => {
         <div className="hidden sm:flex">
             <Navbar/>
         </div>
-        <div className="components sm:ml-24 w-full">
+        <div className="components sm:ml-36 w-full">
+          <ScrollToTop/>
           <Hero/>
           <About/>
           <Skills/>
+          <Projects/>
+          <Testimonial/>
+          <Contact/>
+          <Footer/>
         </div>
     </div>
   )

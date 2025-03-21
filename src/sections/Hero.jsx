@@ -1,10 +1,14 @@
 import { motion } from "framer-motion";
 import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 import profilePic from "../assets/profile.jpg";
+import DownloadResume from "../components/DownloadResume";
 
 const Hero = () => {
   return (
     <section className="h-screen flex flex-col justify-center items-start text-left bg-gray-900 text-white px-10 md:px-20 relative overflow-hidden">
+      <div className="absolute top-10 right-10">
+        <DownloadResume />
+      </div>
       <motion.h1
         className="text-5xl md:text-7xl font-bold font-sourceCode relative z-10 left-[-4%]"
         initial={{ opacity: 0, y: -50 }}
