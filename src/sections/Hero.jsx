@@ -2,11 +2,16 @@ import { motion } from "framer-motion";
 import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 import profilePic from "../assets/profile.jpg";
 import DownloadResume from "../components/DownloadResume";
+import { userDetails } from "../data/data";
 
 const Hero = () => {
+  const jobTitle = userDetails.jobTitle;
+  const jobSubtitle = userDetails.jobSubtitle;
+  const socialLink = userDetails.socialLinks;
+
   return (
     <section className="h-screen flex flex-col justify-center items-start text-left bg-gray-900 text-white px-10 md:px-20 relative overflow-hidden">
-      <div className="absolute top-10 right-10">
+      <div className="absolute top-10 right-10 z-50">
         <DownloadResume />
       </div>
       <motion.h1
@@ -54,8 +59,16 @@ const Hero = () => {
           <h1 className="text-base text-gray-500 font-sans font-normal">
             {"<h1>"}
           </h1>
-          Hi, <br /> I'm <span className="text-blue-400">Mayur</span> <br />
-          Front-End Developer
+          Hi, <br /> I'm{" "}
+          <span className="text-blue-400">
+            {(() => {
+              const name = userDetails.name;
+              const nameParts = name.split(" ");
+              return `${nameParts[0]}`;
+            })()}
+          </span>{" "}
+          <br />
+          {jobTitle}
           <h1 className="text-base text-gray-500 font-sans font-normal">
             {"</h1>"}
           </h1>
@@ -83,7 +96,7 @@ const Hero = () => {
         <h1 className="text-base text-gray-500 font-sans font-normal">
           {"<p>"}
         </h1>
-        Frontend Developer / Full Stack Enthusiast
+        {jobSubtitle}
         <h1 className="text-base text-gray-500 font-sans font-normal">
           {"</p>"}
         </h1>
@@ -103,45 +116,35 @@ const Hero = () => {
 
       <div className="flex flex-col md:flex-row  space-y-4 md:space-y-0 md:space-x-4 mt-3 relative z-10">
         <motion.a
-          href="#contact"
+          href="#"
           className="px-6 py-3 border border-blue-400 text-blue-400 rounded-lg hover:bg-blue-400 hover:text-black transition"
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 1, duration: 0.5 }}
+          onClick={(e) => {
+            e.preventDefault();
+            document
+              .getElementById("contact")
+              ?.scrollIntoView({ behavior: "smooth" });
+          }}
         >
           Contact Me
         </motion.a>
 
         <div className="flex space-x-3">
-          <motion.a
-            href="#contact"
-            className="p-3 border border-blue-400 text-blue-400 rounded-full text-2xl hover:bg-blue-400 hover:text-black transition"
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 1, duration: 0.5 }}
-          >
-            <FaInstagram />
-          </motion.a>
-
-          <motion.a
-            href="#contact"
-            className="p-3 border border-blue-400 text-blue-400 rounded-full text-2xl hover:bg-blue-400 hover:text-black transition"
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 1, duration: 0.5 }}
-          >
-            <FaGithub />
-          </motion.a>
-
-          <motion.a
-            href="#contact"
-            className="p-3 border border-blue-400 text-blue-400 rounded-full text-2xl hover:bg-blue-400 hover:text-black transition"
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 1, duration: 0.5 }}
-          >
-            <FaLinkedin />
-          </motion.a>
+          {socialLink.map((social, index) => (
+            <motion.a
+              href={social.url}
+              key={index}
+              className="p-3 border border-blue-400 text-blue-400 rounded-full text-2xl hover:bg-blue-400 hover:text-black transition"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 1, duration: 0.5 }}
+              target="_blank"
+            >
+              <social.icon />
+            </motion.a>
+          ))}
         </div>
       </div>
 

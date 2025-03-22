@@ -1,8 +1,12 @@
 import { motion } from "framer-motion";
+import { userDetails } from "../data/data";
 
 const Skills = () => {
   return (
-    <section className="py-16 px-10 md:px-20 bg-gray-900 text-white relative overflow-hidden">
+    <section
+      className="py-16 px-10 md:px-20 bg-gray-900 text-white relative overflow-hidden"
+      id="skills"
+    >
       <motion.h1
         className="text-5xl md:text-7xl font-bold font-sourceCode relative z-10 mt-2 left-[-1%]"
         initial={{ opacity: 0, y: -50 }}
@@ -38,11 +42,7 @@ const Skills = () => {
         <span className="text-gray-500 text-base font-sans font-normal">
           {"<p>"}
         </span>
-        I specialize in creating successful responsive websites that are fast,
-        user-friendly, and built with industry best practices. With expertise in
-        front-end development, including HTML, CSS, and JavaScript, I build
-        interactive web applications. I also have experience working with CMS
-        platforms like WordPress and Magento.
+        {userDetails.skillsDescription}
         <span className="text-gray-500 text-base font-sans font-normal">
           {"<p>"}
         </span>
@@ -60,20 +60,7 @@ const Skills = () => {
       </motion.h1>
 
       <motion.div className="mt-3 grid grid-cols-1 md:grid-cols-3 gap-6">
-        {[
-          { name: "React JS", percentage: "90%" },
-          { name: "Responsive Design (Tailwind)", percentage: "85%" },
-          { name: "HTML, CSS, JS", percentage: "95%" },
-          { name: "Database (MongoDB,SQL)", percentage: "80%" },
-          { name: "API Integration", percentage: "85%" },
-          { name: "Performance Optimization", percentage: "75%" },
-          { name: "Version Control (GitHub)", percentage: "85%" },
-          { name: "Node Js", percentage: "85%" },
-          {
-            name: "Build & Deployment (Vercel, Netlify, GitHub)",
-            percentage: "90%",
-          },
-        ].map((skill, index) => (
+        {userDetails.skills.map((skill, index) => (
           <div key={index} className="w-64">
             <span className="text-lg font-semibold">{skill.name}</span>
             <div className="w-full bg-gray-700 h-2 rounded-md mt-1">

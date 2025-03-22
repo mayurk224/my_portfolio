@@ -1,9 +1,10 @@
 import { motion } from "framer-motion";
+import { userDetails } from "../data/data";
 
 const About = () => {
+  const aboutMe = userDetails.about;
   return (
-    
-    <section className="py-16 bg-gray-900 text-white px-6 md:px-20">
+    <section className="py-16 bg-gray-900 text-white px-6 md:px-20" id="about">
       <motion.h1
         className="text-5xl md:text-7xl font-bold font-sourceCode relative z-10 mt-2 left-[-1%]"
         initial={{ opacity: 0, y: -50 }}
@@ -20,9 +21,13 @@ const About = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
       >
-        <span className="text-gray-500 text-base font-sans font-normal">{"<h2>"}</span>
+        <span className="text-gray-500 text-base font-sans font-normal">
+          {"<h2>"}
+        </span>
         About Me
-        <span className="text-gray-500 text-base font-sans font-normal">{"</h2>"}</span>
+        <span className="text-gray-500 text-base font-sans font-normal">
+          {"</h2>"}
+        </span>
       </motion.h2>
 
       <motion.p
@@ -31,9 +36,13 @@ const About = () => {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.5, duration: 1 }}
       >
-        <span className="text-gray-500 text-base font-sans font-normal">{"<p>"}</span>
-        Hello and welcome to my portfolio! I am a passionate front-end developer with a keen eye for design and a love for crafting seamless user experiences. With a strong foundation in HTML, CSS, and JavaScript, I specialize in creating visually stunning and responsive websites. My goal is to bring ideas to life by combining creativity with technical expertise, ensuring that each project I work on not only looks great but also functions flawlessly across different devices. I thrive on collaborating with clients and fellow developers to deliver innovative solutions that exceed expectations. Browse through my portfolio to see a showcase of my work and feel free to reach out if you have any exciting projects in mind. Let’s create something amazing together!
-        <span className="text-gray-500 text-base font-sans font-normal">{"</p>"}</span>
+        <span className="text-gray-500 text-base font-sans font-normal">
+          {"<p>"}
+        </span>
+        {aboutMe}
+        <span className="text-gray-500 text-base font-sans font-normal">
+          {"</p>"}
+        </span>
       </motion.p>
 
       <motion.h1
