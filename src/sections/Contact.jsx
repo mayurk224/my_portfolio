@@ -144,8 +144,9 @@ const Contact = () => {
             value={formData.message}
             onChange={handleChange}
             aria-label="Your Message"
-            className="w-full p-3 bg-gray-800 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+            className="w-full p-3 bg-gray-800 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 resize-none"
           ></textarea>
+
           <button
             type="submit"
             className="w-full bg-blue-500 hover:bg-blue-600 text-white py-3 rounded-lg font-semibold transition duration-300"
