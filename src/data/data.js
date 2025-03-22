@@ -15,7 +15,7 @@ export const userDetails = {
     state: "Maharashtra",
     country: "India",
   },
-  about: `Hello and welcome to my portfolio! I am a passionate front-end developer with a keen eye for design and a love for crafting seamless user experiences. With a strong foundation in HTML, CSS, and JavaScript, I specialize in creating visually stunning and responsive websites. My goal is to bring ideas to life by combining creativity with technical expertise, ensuring that each project I work on not only looks great but also functions flawlessly across different devices. I thrive on collaborating with clients and fellow developers to deliver innovative solutions that exceed expectations. Browse through my portfolio to see a showcase of my work and feel free to reach out if you have any exciting projects in mind. Let’s create something amazing together!`,
+  about: `I am a passionate Full Stack Developer with expertise in React, JavaScript,MongoDb , and Tailwind CSS. I love building responsive, user-friendly web applications that provide seamless experiences across all devices. With a strong foundation in MongoDB, Node.js, and API integration, I also have experience in full-stack development. I enjoy optimizing performance, implementing best practices, and collaborating with teams to create innovative solutions. My goal is to continuously learn, grow, and contribute to impactful projects in the tech industry. Browse through my portfolio to see a showcase of my work and feel free to reach out if you have any exciting projects in mind. Let’s create something amazing together!`,
 
   skills: [
     { name: "React JS", percentage: "90%" },
@@ -29,7 +29,7 @@ export const userDetails = {
     { name: "Build & Deployment (Vercel, Netlify, GitHub)", percentage: "90%" },
   ],
 
-  skillsDescription: `I specialize in creating successful responsive websites that are fast, user-friendly, and built with industry best practices. With expertise in front-end development, including HTML, CSS, and JavaScript, I build interactive web applications. I also have experience working with CMS platforms like WordPress and Magento.`,
+  skillsDescription: `I specialize in developing modern, responsive, and high-performance web applications using the latest technologies. With expertise in React, JavaScript, and Tailwind CSS, I focus on building user-friendly interfaces that provide seamless experiences across all devices. My skill set also includes API integration, database management (MongoDB, SQL), and version control (GitHub), allowing me to work efficiently on full-stack applications. I am passionate about performance optimization, clean code practices, and continuous learning to stay ahead in the evolving tech landscape.`,
 
   socialLinks: [
     {
@@ -99,7 +99,7 @@ export const userDetails = {
     },
   ],
 
-  projectDescription: `Welcome to a curated showcase of some of my recent collaborations! These projects represent just a small glimpse of my work. Explore this collection as a mere glimpse into the vast ocean of my creative endeavors.`,
+  projectDescription: `Welcome to a curated showcase of some of my recent showcasing my expertise in frontend and full-stack development. Each project is built with a focus on performance, responsiveness, and user experience. Explore my work to see how I bring ideas to life with modern web technologies. `,
 
   testimonials: [
     {
