@@ -147,7 +147,7 @@ const Projects = () => {
         </h1>
       </motion.h1>
 
-      <motion.div
+      {/* <motion.div
         className="mt-12 flex justify-center"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -159,7 +159,7 @@ const Projects = () => {
         >
           View All Projects <FaArrowRight />
         </a>
-      </motion.div>
+      </motion.div> */}
 
       <motion.h1
         className="text-5xl md:text-7xl font-bold font-sourceCode relative z-10 mt-2 left-[-1%]"
