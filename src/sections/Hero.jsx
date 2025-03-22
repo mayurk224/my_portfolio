@@ -10,7 +10,7 @@ const Hero = () => {
   const socialLink = userDetails.socialLinks;
 
   return (
-    <section className="h-screen flex flex-col justify-center items-start text-left bg-gray-900 text-white px-10 md:px-20 relative overflow-hidden">
+    <section className="h-screen flex flex-col justify-center items-start text-left bg-gray-900 text-white px-10 md:px-20 relative overflow-hidden" id="home">
       <div className="absolute top-10 right-10 z-50">
         <DownloadResume />
       </div>

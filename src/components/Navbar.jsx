@@ -1,12 +1,33 @@
-import { Link } from "react-router-dom";
 import { MdOutlineWbSunny } from "react-icons/md";
 import { motion } from "framer-motion";
 import { userDetails } from "../data/data";
+import { useEffect, useState } from "react";
 
 const Navbar = () => {
-
   const navLinks = userDetails.navLinks;
-  
+
+  const [activeSection, setActiveSection] = useState("");
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    navLinks.forEach(({ section }) => {
+      const element = document.getElementById(section);
+      if (element) observer.observe(element);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <motion.nav
       initial={{ x: -100, opacity: 0 }}
@@ -46,7 +67,15 @@ const Navbar = () => {
             }}
             className="cursor-pointer"
           >
-            <a className="hover:text-blue-400">{label}</a>
+            <a
+              className={
+                activeSection === section
+                  ? "text-blue-400"
+                  : "text-gray-400 hover:text-blue-400"
+              }
+            >
+              {label}
+            </a>
           </motion.li>
         ))}
       </ul>
