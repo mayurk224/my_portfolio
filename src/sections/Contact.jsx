@@ -33,7 +33,7 @@ const Contact = () => {
           from_email: formData.email,
           message: formData.message,
         },
-        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+        import.meta.env.VITE_EMAILJS_PUBLIC_ID
       )
       .then(() => {
         setLoading(false);

@@ -36,21 +36,25 @@ export const userDetails = {
       name: "Github",
       url: "https://github.com/mayurkamble0250",
       icon: FaGithub,
+      id:1
     },
     {
       name: "LinkedIn",
       url: "https://www.linkedin.com/in/mayurkamble0250",
       icon: FaLinkedin,
+      id:2
     },
     {
       name: "Instagram",
       url: "https://www.instagram.com/mayurkamble_02/",
       icon: FaInstagram,
+      id:3
     },
   ],
 
   projects : [
     {
+      id:1,
       title: "Docs-App-Concept",
       image: docsProjectImage,
       description:
@@ -61,6 +65,7 @@ export const userDetails = {
       details: "#",
     },
     {
+      id:2,
       title: "Anyone-Can-Cook Recipe Book",
       image: anyonecancook,
       description:
@@ -71,6 +76,7 @@ export const userDetails = {
       details: "#",
     },
     {
+      id:3,
       title: "Purchase Paradise",
       image: purchaseparadise,
       description:
@@ -81,6 +87,7 @@ export const userDetails = {
       details: "#",
     },
     {
+      id:4,
       title: "Ochi Design - Clone Website",
       image: ochidesign,
       description:
@@ -137,11 +144,11 @@ export const userDetails = {
   contactDescription: `I am actively seeking freelance opportunities, particularly those that involve ambitious or large-scale projects. Feel free to reach out if you have any questions or ideas!`,
 
   navLinks: [
-    { section: "home", label: "Home" },
-    { section: "about", label: "About" },
-    { section: "skills", label: "Skills" },
-    { section: "projects", label: "Projects" },
-    { section: "testimonials", label: "Testimonials" },
-    { section: "contact", label: "Contact Me" },
+    { id: 1,section: "home", label: "Home" },
+    { id:2,section: "about", label: "About" },
+    { id:3,section: "skills", label: "Skills" },
+    { id:4,section: "projects", label: "Projects" },
+    { id:5,section: "testimonials", label: "Testimonials" },
+    { id:6,section: "contact", label: "Contact Me" },
   ],
 };

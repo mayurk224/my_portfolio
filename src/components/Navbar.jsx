@@ -53,9 +53,9 @@ const Navbar = () => {
 
       {/* Navigation Links */}
       <ul className="md:flex flex-col space-y-6 text-white text-lg font-sourceCode">
-        {navLinks.map(({ section, label }, index) => (
+        {navLinks.map(({ section, label, id }, index) => (
           <motion.li
-            key={section}
+            key={id}
             initial={{ x: -50, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}

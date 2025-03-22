@@ -34,7 +34,7 @@ const Footer = () => {
             Quick Access
           </h3>
           <ul className="font-fira space-y-2 mt-3 text-gray-400">
-            {navLinks.map((link) => (
+            {navLinks.map((link, index) => (
               <li key={link.id} className="hover:text-blue-400 cursor-pointer">
                 {link.label}
               </li>

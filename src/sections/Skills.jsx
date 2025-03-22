@@ -44,7 +44,7 @@ const Skills = () => {
         </span>
         {userDetails.skillsDescription}
         <span className="text-gray-500 text-base font-sans font-normal">
-          {"<p>"}
+          {"</p>"}
         </span>
       </motion.p>
 

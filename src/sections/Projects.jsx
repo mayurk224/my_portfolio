@@ -49,7 +49,7 @@ const Projects = () => {
         </span>
         {userDetails.projectDescription}
         <span className="text-gray-500 text-base font-sans font-normal">
-          {"<p>"}
+          {"</p>"}
         </span>
       </motion.p>
 
@@ -64,9 +64,9 @@ const Projects = () => {
         </h1>
       </motion.h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-3">
-        {userDetails.projects.map((project, index) => (
+        {userDetails.projects.map(( project, id , index) => (
           <motion.div
-            key={index}
+            key={id}
             className="bg-gray-800 rounded-lg p-5 shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col h-full"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
