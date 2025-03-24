@@ -82,11 +82,11 @@ const Navbar = () => {
 
       {/* Theme Toggle Button */}
       <motion.button
-        className="text-white flex items-center justify-center h-10 w-10 text-lg font-sourceCode hover:text-blue-400 rounded-full bg-gray-800"
+        className="text-white flex items-center justify-center h-10 w-10 text-lg font-sourceCode hover:text-blue-400 rounded-full bg-gray-950"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
       >
-        <MdOutlineWbSunny />
+        {/* <MdOutlineWbSunny /> */}
       </motion.button>
     </motion.nav>
   );
