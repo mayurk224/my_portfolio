@@ -34,19 +34,19 @@ export const userDetails = {
   socialLinks: [
     {
       name: "Github",
-      url: "https://github.com/mayurkamble0250",
+      url: "https://github.com/mayurk224",
       icon: FaGithub,
       id:1
     },
     {
       name: "LinkedIn",
-      url: "https://www.linkedin.com/in/mayurkamble0250",
+      url: "https://www.linkedin.com/in/mayurkamble02",
       icon: FaLinkedin,
       id:2
     },
     {
       name: "Instagram",
-      url: "https://www.instagram.com/mayurkamble_02/",
+      url: "https://www.instagram.com/mayurkamble_02",
       icon: FaInstagram,
       id:3
     },
