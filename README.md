@@ -99,6 +99,11 @@ This project is configured for easy deployment on Vercel with the included `verc
 3. Deploy
 
 
+### 💡 Inspiration
+The design of this portfolio was inspired by the incredible work of [Tarane Yarahmadi](https://dribbble.com/shots/22427081-Portfolio-Website
+) on Dribbble. Huge thanks for the creative UI/UX inspiration!
+
+
 ## 📞 Contact
 
 Mayur Kamble - [mayurkamble0250@gmail.com](mailto:mayurkamble0250@gmail.com)
